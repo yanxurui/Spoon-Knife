@@ -1,10 +1,9 @@
-sudo: required
-dist: trusty
-
 language: python
-install: pip install -r requirements.txt
 services:
   - memcached
+
+install: pip install -r requirements.txt
 script:
+  - echo 'hello world'
   - tree .
   - python -m unittest test_module1

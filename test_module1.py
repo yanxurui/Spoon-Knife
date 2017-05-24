@@ -10,6 +10,7 @@ class TestMemcached(unittest.TestCase):
 
     def test_delete(self):
         client = Client(('localhost', 11211))
+        client.set('some_key', 'some_value')
         client.delete('some_key')
         result = client.get('some_key')
         self.assertEqual(result, None)
