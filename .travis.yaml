@@ -3,6 +3,8 @@ dist: trusty
 
 language: python
 install: pip install -r requirements.txt
+services:
+  - memcached
 script:
   - tree .
   - python -m unittest test_module1
